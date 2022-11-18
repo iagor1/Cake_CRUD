@@ -1,0 +1,19 @@
+<button (click)="initNewCake()">Create New Cake</button>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>details</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cake of cakes">
+      <td>{{ cake.name }}</td>
+      <td>{{ cake.details }}</td>
+      <td><button (click)="editCake(cake)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+<app-cake-edit
+  [cake]="cakeToEdit"
+  (cakesUpdated)="updateCakeList($event)">
+</app-cake-edit>

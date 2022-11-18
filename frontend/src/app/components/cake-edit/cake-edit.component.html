@@ -1,0 +1,15 @@
+<div *ngIf="cake">
+    <h2>{{ cake.name }}</h2>
+    <div>
+      Name:
+      <input [(ngModel)]="cake.name" placeholder="Name" />
+    </div>
+    <div>
+      Details:
+      <input [(ngModel)]="cake.details" placeholder="details" />
+    </div>
+    <button (click)="updateCake(cake)" *ngIf="cake.id">Save</button>
+    <button (click)="deleteCake(cake)" *ngIf="cake.id">Delete</button>
+    <button (click)="createCake(cake)" *ngIf="!cake.id">Create</button>
+  </div>
+  
