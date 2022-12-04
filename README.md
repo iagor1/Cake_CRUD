@@ -10,6 +10,9 @@
 git clone https://github.com/iagor1/cake_crud
 ```
 ### Frontend
+- ```sh
+npm install
+```
 - ng serve -o
 ### Backend 
 - install Microsoft.EntityFrameworkCore package 
